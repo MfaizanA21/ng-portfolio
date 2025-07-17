@@ -1,0 +1,40 @@
+/* Make sure the body and html have no margin/padding (in global styles.css too if needed) */
+:host {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.header-bar {
+  width: 100vw;                /* Full viewport width */
+  height: 80px;                /* Header height */
+  background: linear-gradient(to bottom, #2c1b3a 0%, #2c1b3a 90%, #000 100%);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  box-sizing: border-box;      /* Includes padding in width */
+  padding-left: 20px;          /* Optional: spacing from left */
+  padding-right: 20px;
+  margin: 0;
+  overflow: hidden;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-item a:hover {
+  color: #3ae905ff;
+}
