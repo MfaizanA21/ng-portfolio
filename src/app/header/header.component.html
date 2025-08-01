@@ -1,8 +1,11 @@
 <header class="header-bar">
+  <div class="menu-toggle" (click)="toggleMenu()">
+    &#9776;
+  </div>
   <nav class="nav-container">
-    <ul class="nav-list">
+    <ul class="nav-list" [class.open]="menuOpen">
       <li class="nav-item" *ngFor="let item of navItems">
-        <a href="#">{{ item }}</a>
+        <a [routerLink]="[item.toLowerCase()]" routerLinkActive="active" (click)="toggleMenu()">{{ item }}</a>
       </li>
     </ul>
   </nav>
